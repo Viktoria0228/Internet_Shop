@@ -1,0 +1,108 @@
+form{
+    margin: 0 auto;
+    width: 488px;
+    height: 455px;
+    padding: 10px;
+    border: solid 3px;
+    border-radius: 25px;
+    margin-top: 5%; 
+    display: grid;
+}
+
+h1{
+    margin-top: 44px;
+    margin-left: 39px;
+    font-family: Inter;
+    line-height: 29.05px;
+}
+.authorization_input{
+    width: 370px;
+    height: 56px;
+    border: solid 3px;
+    border-radius: 10px;
+    margin-left: 39px;
+}
+
+.authorization_submit{
+    font: 24px Inter ;
+    font-weight: 400;
+    border: 2px solid black;
+    background-color: white;
+    width: 204px;
+    height: 56px;
+    border: solid 2px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-top: 17px;
+    position: relative;
+    left: 27%;
+}
+
+.links{
+    padding: 4px, 122px, 4px, 122px;
+    margin-left: 88%;
+    width: Fixed 429px;
+    size: 24px;
+    height: Hug 41px;
+    color: black;
+}
+
+.links :visited{
+    color: black;
+}
+
+.links a{
+    width: 1400px;
+    height: 33px;
+    font-size: 24px;
+}
+
+.modal-window{
+    position: absolute;
+    justify-content: center;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+    background-color: #FFFFFFB2;
+    
+}
+
+.not-registered{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 350px;
+    border-radius: 25px;
+    border: 3px solid black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    gap: 10px;
+    top: 25%;
+    right: 30%;
+}
+
+.not-registered h1{
+    width: 441px;
+    height: 95px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 35px;
+    margin: 0 auto;
+    line-height: 42.36px;
+    text-align: center;
+    margin-top: 20%;
+}  
+
+.not-registered a{
+    position: absolute;
+    width: 650px;
+    height: 95px;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    top: 310px;
+    text-align: right;
+    color: black;
+}

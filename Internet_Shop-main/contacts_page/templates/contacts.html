@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Сторінка контактів
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('home.static', filename = 'home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="links">
+            <a class = "options" href = "/">HOME</a>
+            <a class = "options" href = "/shop">SHOP</a>
+            <a class = "options" href = "/cart">CART</a>
+            <a class = "active" href = "/contacts">CONTACTS</a>
+            <a class = "options" href = "/admin">ADMIN</a>
+            {% if not is_authenticated %}
+                <a href = '/registration' class="options">REGISTRATION</a>
+                <a href = "/authorization" class = "options">AUTHORIZATION</a>
+            {% else %}
+                <h1 class = "username">{{ current_user.name }}</h1>
+            {% endif %}
+        </div>
+        <!-- {% if current_user.is_authenticated %}
+            <h1 class = "username">{{ current_user.name }}</h1>
+        {% endif %} -->
+    </header>
+
+    <main><h1>CONTACTS PAGE</h1></main>
+    
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Admin
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('admin.static', filename = 'admin.css')}}">
+{% endblock %}
+
+<!-- {% block script %}  -->
+    
+<!-- {% endblock %} -->
+
+{% block content %}
+    <header>
+        <div class="links">
+            <a class = "options" href = "/">HOME</a>
+            <a class = "options" href = "/shop">SHOP</a>
+            <a class = "options" href = "/cart">CART</a>
+            <a class = "options" href = "/contacts">CONTACTS</a>
+            <a class = "active" href = "/admin">ADMIN</a>
+            {% if not is_authenticated %}
+                <a href = '/registration' class="options">REGISTRATION</a>
+                <a href = "/authorization" class = "options">AUTHORIZATION</a>
+            {% else %}
+                <h1 class = "username">{{ current_user.name }}</h1>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        <div class="add-product">
+            <p class="add-product-p">додати продукт</p>
+            <button class="plus"><span class = "plus-text">+</span></button>
+        </div>
+        {% for product in products %}
+            <div class = "product">
+        
+                <div class = "info"> 
+                    <h1 id = "name-{{ product.id }}">{{ product.name }}</h1>
+                    <button class="pencil-name" id = "{{ product.id }}">
+                        <p class="name">✏</p>
+                    </button>
+                    <h2 id = "price-{{ product.id }}">{{ product.price }} грн</h2>
+                    <button class="pencil-price" id = "{{ product.id }}">
+                        <p class="price">✏</p>
+                    </button>
+                    <h4 id = "discount-{{ product.id }}">Знижка {{ product.discount }}%</h4>
+                    <button class="pencil-discount" id = "{{ product.id }}">
+                        <p class="discount">✏</p>
+                    </button>
+                    <h5>{{ product.price - (product.price / 100 * product.discount) }} грн</h5>
+
+                    <button class = "buy" id = "{{ product.id }}">КУПИТИ</button>
+                    <h3>Ємність:</h3>
+  
+                    <div class = "available">
+
+                        <div class = "buttons">
+
+                            {% for memory in ["32 Гб", "60 Гб", "128 Гб", "256 Гб", "512 Гб", "1 Тб"] %}
+                                {% if product.description == memory %}
+                                    <button class = "chosen">{{ product.description }}</button>
+                                    <button class="pencil-description" id = "{{ product.id }}">
+                                        <p class="description">✏</p>
+                                    </button>
+                                {% else %}
+                                    <button class = "unchosen">{{ memory }}</button>
+                                    <button class="pencil-description" id = "{{ product.id }}">
+                                        <p class="description">✏</p>
+                                    </button>
+                                {% endif %}
+                                
+                            {% endfor %}
+                            
+                        </div> 
+                        <form method="post" class="form-del">
+                            <button style="margin-top: 42px; margin-left: 780px; background-color: transparent; border: 0" class="button-del" name = "del" value = "{{product.id}}"></button>
+                        </form>
+                        
+                        <p class="in-stock">Видалити товар</p>
+                        <img src="{{ url_for( 'shop.static', filename = 'images/trash.png' )}}">
+                        
+                    </div>
+                    <button style = "background-color: transparent; border: 0" class="pencil-image" id = "{{ product.id }}">
+                        <p class="image">✏</p>
+                    </button>
+                </div>
+                <img src = "{{ url_for( 'shop.static', filename = 'images/' + product.image ) }}">
+            </div>
+            <script src = "{{ url_for('admin.static', filename = 'js/admin.js')}}" defer></script>
+             
+        {% endfor %}
+        <div class = 'modal-window' style = 'display: none;'>
+            <form method="post" class="form"> 
+                <p class="modal-text">CHANGE TEXT:</p>
+                
+                <input class = "modal-input" id = "select-file" type="" accept="" enctype = ''>
+                <button name="change" type="submit" value="button-value" class="name-button">SEND</button>
+            </form>
+        </div>
+        <div class="modal-form" style="display: none;">
+            <form method = "post">
+                <h1 class="new-product">NEW PRODUCT</h1>
+                <h1 class = "image-product">IMAGE PRODUCT:</h1>
+                <input type="file" class="input-new-image" name="image">
+                <h1 class = "name-product">NAME PRODUCT:</h1>
+                <input type="text" class="input-new-product" name="name">
+                <h1 class="description-product">DESCRIPTION PRODUCT:</h1>
+                <input type="text" class="input-new-description" name="description">
+                <h1 class = "price-product">PRICE PRODUCT:</h1>
+                <input type="text" class="input-new-price" name="price">
+                <h1 class = "discount-product">DISCOUNT PRODUCT:</h1>
+                <input type="text" class="input-new-discount" name="discount">
+                <h1 class = "count-product">COUNT PRODUCT:</h1>
+                <input type="text" class="input-new-count" name="count">
+                <button class="send-new-product" type = "submit">SEND</button>
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

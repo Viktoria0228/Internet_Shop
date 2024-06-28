@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Сторінка авторизації
+{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('authorization_page.static', filename = 'authorization.css') }}">
+{% endblock %}
+
+{% block header %}
+    <div class = "links">
+        <a href = "/registration">REGISTRATION</a>
+    </div>
+    
+{% endblock %}
+
+{% block content %}
+    <form method="post" id = authorization_content>
+        <h1>Login or email</h1>
+        <input class = "authorization_input" type = "text" name = "name" required>
+        <h1>Password</h1>
+        <input class = "authorization_input" type = "text" name = "password" required>
+        <button class = "authorization_submit" type = "submit">SEND</button>
+    </form>
+    {% if not is_registered %}
+        <div class="modal-window" style="display: none;">
+            <div class="not-registered">
+                <h1>YOU ARE NOT REGISTERED</h1>
+                <a href="/registration">--> REGISTRATION</a>
+            </div>
+        </div>
+    {% endif %}
+
+    <script src="{{ url_for('authorization_page.static', filename = 'js/authorization.js') }}"></script>
+{% endblock %}
