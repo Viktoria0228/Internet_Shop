@@ -1,0 +1,249 @@
+header{
+    width: 1440px;
+    height: 80px;
+    padding: 17px 39px 17px 39px;
+    gap: 387px;
+    opacity: 0px;
+}
+
+.links{
+    /* background-color: rgb(13, 255, 174); */
+    padding: 4px, 122px, 4px, 122px;
+    font-weight: 400px;
+    display: flex;
+    width: 80%;
+    height: 47px;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+}
+
+.links :visited{
+    color: black;
+}
+
+.links a{
+    color: black;
+    font-size: 24px;
+    /* width: 177px; */
+    height: 44px;
+    /* background-color: blueviolet; */
+    text-align: center;
+}
+
+
+main{
+    top: 48px;
+    left: 1561px;
+    padding: 10px 10px 10px 39px;
+    gap: 10px;
+    opacity: 0px;
+}
+
+.product{
+    width: 1350px;
+    /* height: 1089px; */
+    padding: 31px 15px 31px 15px;
+    gap: 10px;
+    opacity: 0px;
+    /* background-color: red; */
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.product img{
+    width: 251px;
+    height: 306px;
+    bottom: 8px;
+    right: 16px;
+}
+
+.info{
+    /* background-color: rgba(0, 255, 0, 0.158); */
+    margin-left: 280px;
+    display: flex;
+    position: absolute;
+    width: 1105px;
+    height: 291px;
+    padding: 0px 29px 15px 29px;
+    gap: 15px;
+    border-right: solid 2px;
+    border-left: solid 2px;
+    opacity: 0px;
+}
+
+.available{
+    /* background-color: aquamarine; */
+    position: absolute;
+    margin-top: 20%;
+    width: 950px;
+    height: 42px;
+    padding: 5px 14px 5px 0px;
+    gap: 488px;
+    opacity: 0px;
+}
+
+.buttons{
+    position: absolute;
+    /* background-color: antiquewhite; */
+    top: 75%;
+}
+
+.buttons .unchosen{
+    background-color: white;
+    border-color: black;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer
+}
+
+.buttons .chosen{
+    background-color: #EFCB4A;
+    border-color: black;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer
+}
+
+.available img{
+    width: 38.12px;
+    height: 36px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    margin-left: 40%;
+}
+
+.available p{
+    width: 183px;
+    height: 28px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: center;
+    margin-left: 98%;
+}
+
+.info h1{
+    font-size: 32px;
+    font-family: Inter;
+    width: 1300px;
+    height: 34px;
+    font-weight: 700;
+}
+
+.info h2{
+    text-decoration: line-through;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.63px;
+    text-align: left;
+    position: absolute;
+    text-align: center;
+    margin-top: 4.7%;
+}
+
+.info h3{
+    position: absolute;
+    margin-top: 20%;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    width: 122px;
+    height: 36px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.info h4{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: left;
+    width: 170px;
+    height: 34px;
+    position: absolute;
+    margin-top: 7%;
+}
+
+.buy{
+    line-height: 29.05px;
+    background-color: #EFCB4A;
+    font: Inter;
+    width: 149px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    height: 55px;
+    border: solid 2px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 11%;
+}
+
+.options{
+    text-decoration: none;
+}
+.active{
+    font-weight: bold;
+}
+
+.cart{
+    display: none;
+}
+
+#active-cart{
+    width: 28px;
+    height: 28px;
+    border: 1px;
+    border: 1px solid #000000;
+    background-color: #EFCB4A;
+    border-radius: 50%;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: center;
+    display: block;
+    /* position: absolute;
+    margin-left: 100px; */
+    position: relative;
+    left: -5%;
+}
+
+.username{
+    /* background-color: aqua; */
+    width: 247px;
+    height: 44px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    left: 80%;
+    top: 10px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: right;
+}
+.buy{
+    position: absolute;
+    top: 12%;
+
+}
+.info h5{
+    position: absolute;
+    right: 85%;
+    top: 26%;
+    font-family: Inter;
+    font-size: 24px;
+}

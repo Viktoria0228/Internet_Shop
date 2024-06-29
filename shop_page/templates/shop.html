@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Shop
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('shop.static', filename = 'shop.css')}}">
+{% endblock %}
+
+<!-- {% block script %}  -->
+    
+<!-- {% endblock %} -->
+
+{% block content %}
+    <header>
+        <div class="links">
+            <a class = "options" href = "/">HOME</a>
+            <a class = "active" href = "/shop">SHOP</a>
+            <a class = "options" href = "/cart">CART</a>
+            <p class = "cart"></p>
+            <a class = "options" href = "/contacts">CONTACTS</a>
+            <a class = "options" href = "/admin">ADMIN</a>
+            {% if not is_authenticated %}
+                <a href = '/registration' class="options">REGISTRATION</a>
+                <a href = "/authorization" class = "options">AUTHORIZATION</a>
+            {% else %}
+                <h1 class = "username">{{ current_user.name }}</h1>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        {% for product in products %}
+            <div class = "product">
+
+        
+                <div class = "info"> 
+                    <h1>{{ product.name }}</h1>
+                    <h2>{{ product.price }} грн</h2>
+                    <h4>Знижка {{ product.discount }}%</h4>
+                    <h5>{{ product.price - (product.price / 100 * product.discount) }} грн</h5>
+                    <button class = "buy" id = "{{ product.id }}">КУПИТИ</button>
+                    <h3>Ємність:</h3>
+  
+                    <div class = "available">
+
+                        <div class = "buttons">
+
+                            {% for memory in ["32 Гб", "60 Гб", "128 Гб", "256 Гб", "512 Гб", "1 Тб"] %}
+                                {% if product.description == memory %}
+                                    <button class = "chosen">{{ product.description }}</button>
+                                {% else %}
+                                    <button class = "unchosen">{{ memory }}</button>
+                                {% endif %}
+                            {% endfor %}
+                        </div> 
+
+                        <p>Товар в наявності</p>
+                        <img src="{{ url_for( 'shop.static', filename = 'images/tick.png' )}}">
+                        
+                         
+
+                    </div>
+                </div>
+                <img src = "{{ url_for( 'shop.static', filename = 'images/' + product.image ) }}">
+            </div>
+
+        {% endfor %}
+        <script src = "{{ url_for('shop.static', filename = 'js/shop.js')}}" defer></script>
+    </main>
+
+{% endblock %}

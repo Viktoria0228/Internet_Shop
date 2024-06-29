@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Сторінка корзини
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('cart.static', filename = 'cart.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <header>
+       
+        <div class="links">
+            <a class = "options" href = "/">HOME</a>
+            <a class = "options" href = "/shop">SHOP</a>
+            <a class = "active" href = "/cart">CART</a>
+            <a class = "options" href = "/contacts">CONTACTS</a>
+            <a class = "options" href = "/admin">ADMIN</a>
+            {% if not is_authenticated %}
+                <a href = '/registration' class="options">REGISTRATION</a>
+                <a href = "/authorization" class = "options">AUTHORIZATION</a>
+            {% else %}
+                <h1 class = "username">{{ current_user.name }}</h1>
+            {% endif %}
+        </div>
+       
+    </header>
+
+    {% if not waiting %}
+        <main>
+            {% for product in products %}
+                <div class = "products", id = "{{ product.id }}">
+                    <h2 class = "product-price" id = "{{ product.id }}">{{ product.price - (product.price / 100 * product.discount) }} грн</h2>
+                    <button class = "delete" id = "{{ product.id }}">🗑️</button>
+                    <button class = "minus " id = "{{ product.id }}">-</button>   
+                    <h3 class = "product_quantity" id = "quantity {{ product.id }}">{{ quantity[product.id | string] }}</h3>
+                    <button class = "plus" id = "{{ product.id }}">+</button>
+                    
+                    <h1 class = " name" id = "{{ product.name }}">{{ product.name }}</h1>
+                    <img class = "images" src="{{ url_for('shop.static', filename = 'images/' + product.image) }}" alt="">
+                    <h1 class = "invisible", id = "{{ product.id }}">{{ product.price }}</h1>
+                </div>
+        
+            {% endfor %}
+            
+                
+
+            <div class = "order el">
+                <button class = "checkout">ПЕРЕЙТИ ДО ОФОРМЛЕННЯ</button>
+                <div class = "calculation">
+                    <h6 class = "price" ><span id = "count-product">0</span> товарів на суму</h6>
+                    <h3 class = "price"><span id = "total-price"></span>грн</h3>
+                </div>
+                <div class = "calculation">
+                    <h5 class = "price">Знижка</h5>
+                    <h2 class = "price", id = "total-discount">грн</h2>
+                </div>
+                <div class = "calculation">
+                    <h4 class = "total amount">Загальна сума</h4>
+                    <p class = "total amount" id = "total-amount"></p>
+                </div>
+            </div>
+        
+        </main>
+        <script src = "{{ url_for('cart.static', filename = 'js/buttonsCookies.js' ) }}"></script>
+        <script src = "{{ url_for('cart.static', filename = 'js/productInfo.js' ) }}"></script>
+        <div class="placing" style="display: none;">
+            <form method="post" >
+                <h1>ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</h1>
+                <label >ІМ'Я:</label>
+                <input type="text" name = "name">
+                <label >ПРІЗВИЩЕ: </label>
+                <input type="text" name = "surname">
+                <label>ТЕЛЕФОН ЗАМОВНИКА:</label>
+                <input type="text" name = "phone_number">
+                <label>EMAIL ЗАМОВНИКА</label>
+                <input type="text" name = "email">
+                <label>МІСТО ОТРИМУВАЧА</label>
+                <input type="text" name = "city_recepient">
+                <label> ВІДДІЛЕННЯ НОВОЙ ПОШТИ:</label>
+                <input type="text" name = "post_office">
+                <label> ДОДАТКОВІ ПОБАЖАННЯ: </label>
+                <input type="text" name= "add_wishes">
+                <button class="send-product" type="submit">SEND</button>
+            </form>
+        </div> 
+
+    {% elif waiting %}
+        <div class = 'order-confirmation'>
+            <h1 class = 'data'>
+                ВАШІ ДАНІ У ОБРОБЦІ</h1>
+            <h1 class= 'shop_assistant'>
+                КОНСУЛЬТАНТ ЗВ'ЯЖЕТЬСЯ З ВАМИ ДЛЯ ПІДТВЕРДЖЕННЯ ЗАМОВЛЕННЯ
+            </h1>
+            <div class = "all-waiting-products">
+                {% for product in products %}
+                    <div class = "waiting-products">
+                        <img class = "waiting-images" src="{{ url_for('shop.static', filename = 'images/' + product.image) }}" alt="">
+                        <h1 class = "waiting-name">{{ product.name }}</h1>
+                        <h3 class = "waiting-product-quantity">{{ quantity[product.id | string] }}</h3>
+                        <h2 class = "waiting-product-price">{{ product.price - (product.price / 100 * product.discount) }} грн</h2>
+                        
+                       
+                    </div>
+                {% endfor %}   
+                </div> 
+        
+        <h4 class = "total-amount">ЗАГАЛЬНА ВАРТІСТЬ ЗАМОВЛЕННЯ:</h4>
+        <p class = "total-amount"></p>
+        <div class="cancel_cont">
+            <button class="cancel">ВІДМІНИТИ ЗАМОВЛЕННЯ</button>
+        </div>
+        </div>
+    {% endif %}
+{% endblock %}

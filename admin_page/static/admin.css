@@ -1,0 +1,551 @@
+header{
+    /* background-color: aquamarine; */
+    width: 1440px;
+    height: 80px;
+    padding: 17px 39px 17px 39px;
+    gap: 387px;
+    opacity: 0px;
+}
+
+.links{
+    /* background-color: rgb(13, 255, 174); */
+    padding: 4px, 122px, 4px, 122px;
+    font-weight: 400px;
+    display: flex;
+    width: 80%;
+    height: 47px;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+}
+
+.links :visited{
+    color: black;
+}
+
+.links a{
+    color: black;
+    font-size: 24px;
+    /* width: 177px; */
+    height: 44px;
+    /* background-color: blueviolet; */
+    text-align: center;
+}
+
+
+main{
+    top: 48px;
+    left: 1561px;
+    padding: 10px 10px 10px 39px;
+    gap: 10px;
+    opacity: 0px;
+}
+
+.product{
+    /* position: static; */
+    width: 1350px;
+    height: 321px;
+    padding: 31px 15px 31px 15px;
+    gap: 10px;
+    opacity: 0px;
+    /* background-color: red; */
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.product img{
+    width: 251px;
+    height: 306px;
+    bottom: 8px;
+    right: 16px;
+}
+
+.info{
+    /* background-color: rgba(0, 255, 0, 0.158); */
+    margin-left: 300px;
+    display: flex;
+    position: absolute;
+    width: 965px;
+    height: 341px;
+    padding: 0px 29px 15px 29px;
+    gap: 15px;
+    border-right: solid 2px;
+    border-left: solid 2px;
+    opacity: 0px;
+}
+
+.available{
+    /* background-color: aquamarine; */
+    position: absolute;
+    margin-top: 20%;
+    width: 950px;
+    height: 42px;
+    padding: 5px 14px 5px 0px;
+    gap: 488px;
+    opacity: 0px;
+}
+
+.buttons{
+    position: absolute;
+    /* background-color: antiquewhite; */
+    top: 90px;
+}
+
+.buttons .unchosen{
+    background-color: white;
+    border-color: black;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer;
+    position: relative;
+    top: -12px;
+}
+
+.buttons .chosen{
+    background-color: #EFCB4A;
+    border-color: black;
+    border-radius: 20px;
+    border: solid 2px;
+    cursor: pointer;
+    position: relative;
+    top: -12px;
+}
+
+/* .available .buttons .pencil{ */
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* right: 5px; */
+/* } */
+
+.available .buttons .pencil .pencil-description{
+    /* position: absolute; */
+    display: inline-block;
+}
+
+.available img, .form-del .button-del{
+    width: 38.12px;
+    height: 36px;
+    gap: 0px;
+    opacity: 0px;
+    /* position: absolute; */
+    margin-top: -50px;
+    margin-left: 82%;
+}
+
+.available .in-stock{
+    width: 183px;
+    height: 28px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: center;
+    margin-left: 85%;
+    margin-top: 50px;
+}
+
+.info h1{
+    font-size: 32px;
+    font-family: Inter;
+    width: 1300px;
+    height: 34px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.info h2{
+    text-decoration: line-through;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.63px;
+    text-align: left;
+    position: absolute;
+    text-align: center;
+    margin-top: 5.5%;
+}
+
+.info h3{
+    position: absolute;
+    margin-top: 23%;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    width: 122px;
+    height: 36px;
+    gap: 0px;
+    opacity: 0px;
+    margin-bottom: 0px;
+}
+
+.info h5{
+    position: absolute;
+    /* right: 85%; */
+    margin-top: 10%;
+    font-family: Inter;
+    font-size: 24px;
+    font-family: Inter;
+    /* font-size: 32px; */
+    font-weight: 700;
+    line-height: 38.73px;
+    text-align: left;
+}
+
+.info h4{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: left;
+    width: 170px;
+    height: 34px;
+    position: absolute;
+    margin-top: 8%;
+}
+
+.buy{
+    line-height: 29.05px;
+    background-color: #EFCB4A;
+    align-items: center;
+    font: Inter;
+    width: 149px;font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: center;
+    height: 55px;
+    border: solid 2px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 11%;
+}
+
+.options{
+    text-decoration: none;
+}
+.active{
+    font-weight: bold;
+}
+#active-cart{
+    width: 28px;
+    height: 27px;
+    gap: 0px;
+    opacity: 0px;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #000000;
+    background-color: #EFCB4A;
+    border-radius: 50%;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    text-align: center;
+    position: absolute;
+    margin-left: 300px;
+}
+
+.username{
+    /* background-color: aqua; */
+    width: 247px;
+    height: 44px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    left: 80%;
+    top: 10px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: right;
+}
+.buy{
+    position: absolute;
+    top: 12%;
+
+}
+
+.image, .info .pencil, .pencil-name, .pencil-price, .pencil-discount, .pencil-description, .pencil-image{
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color:#D1D8DB;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.pencil-name{
+    position: absolute;
+    left: 930px;  
+    top: 25px;
+}
+
+.pencil-discount{
+    position: absolute;
+    left: 200px;  
+    top: 80px;
+}
+
+.pencil-price{
+    /* width: 15px;
+    height: 15px; */
+    /* top: 7px; */
+    position: absolute;
+    left: 200px;  
+    top: 45px;
+}
+
+.pencil .image{
+    position: absolute;
+    /* position: relative; */
+    left: 270px;
+    top: -220px;
+    border: 3px solid black;
+}
+
+.modal-window{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form{
+    position: relative;
+    display: flex;
+    width: 700px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+.form *{
+    margin: 10px;
+}
+
+.label, .input-data{
+    width: 300px;
+    text-align: left;
+}
+
+ 
+
+.modal-input{
+    display: inline-block;
+    width: 450px;
+    height: 74px;
+    top: 139.5px;
+    left: 125px;
+    gap: 0px;
+    border: 2px solid;
+    border-radius: 15px;
+    opacity: 0px;
+    font-size: 26px;
+    padding: 15px;
+}
+
+
+
+.modal-input::file-selector-button {
+
+    width: 241px ;
+    height: 55px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1px, 31px, 1px, 31px;
+    gap: 10px;
+    background-color: #D1D8DB;
+    color: transparent;
+  }
+  .modal-input::before{
+    content: "";
+
+  }
+  .modal-input::after{
+    content: "SELECT A FILE";
+    position: absolute;
+    /* top: 150px;
+    right: 150px; */
+
+  }
+
+
+
+.name-button{
+    width: 446px;
+    height: 51px;
+    font: Inter;
+    font-size: 25px;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    text-align: center;
+    justify-content: center;
+}
+
+.modal-text{
+    width: 446px;
+    height: 30px;
+    top: 89.5px;
+    left: 127px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30.26px;
+    text-align: left;        
+}
+
+.form-del{
+    position: absolute;
+}
+
+.pencil-image{
+    position: absolute;
+    top: 150px;
+    left: -50px;
+}
+
+.add-product{
+    display: inline-flex;
+    position: absolute;
+    gap: 30px;
+    right: 100px;
+    top: 75px;
+    width: 218px;
+    height: 45px;  
+    border-radius: 15px;
+}
+
+.add-product-p{
+   
+    width: 163px;
+    height: 35px;
+    top: 21.5px;
+    left: 1098px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 21.09px;
+    text-align: center;    
+}
+
+.plus{
+    width: 45px;
+    height: 45px;
+    padding: 11.5px 11.5px 11.5px 11.5px;
+    gap: 0px;
+    border-radius: 15px;
+    border: 3px solid;  
+    font-size: 25px;
+    align-items: center;
+}
+
+.plus .plus-text{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: -6px;
+}
+.modal-form form{
+    position: absolute;
+    width: 700px;
+    right: 31%;
+    size: 10px;
+    top: 5%;
+    height: 85% ;
+    text-align: center;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    border: 3px solid black;
+    border-radius: 7%;
+    background-color: rgba(255, 255, 255);
+    padding-top: 3%;
+    /* opacity: 1; */
+}
+
+.modal-form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* .modal-form .new-product{
+    font-weight: bold;
+} */
+.input-new-image{
+    width: 450px;
+    height: 5%;
+    top: 139.5px;
+    left: 125px;
+    gap: 0px;
+    border: 2px solid;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 3px;
+    padding-left: 3%;
+    /* text-align: center; */
+}
+
+
+.input-new-product, .input-new-description, .input-new-price, .input-new-discount, .input-new-count, .send-new-product{
+    /* background-color: #000000; */
+    width: 450px;
+    height: 5%;
+    border-radius: 15px;
+    border: 2px solid;
+    opacity: 0px;
+}
+.send-new-product{
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30.26px;
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-form h1{
+    width: 446px;
+    margin-top: 2.5%;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.63px;
+    text-align: left;
+    margin-left: 130px;
+}
+
+.modal-form .new-product{
+    width: 470px;
+    height: 34px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.89px;
+    text-align: center;    
+}

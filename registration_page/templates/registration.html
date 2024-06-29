@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Сторінка реєстрації
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('registration.static', filename = 'reg.css') }}">
+{% endblock %}
+
+{% block header %}
+    <div class = "links">
+        <h1>REGISTRATION</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <form method = "post" id = "registration_content">
+        <h1>Login</h1>
+        <input class = "registration_input" type = "text" name = "name" required>
+        <h1>Email</h1>
+        <input class = "registration_input" type = "text" name = "email" required>
+        <h1>Password</h1>
+        <input class = "registration_input" type = "text" name = "password1" required>
+        <h1>Password confirmation</h1>
+        <input class = "registration_input" type = "text" name = "password2" required>
+        <button class = "registration_submit" type = "submit">SEND</button>
+    </form>
+    <div class="modal-window" style="display: none;">
+        <div class="confirmed">
+            <h1>CONFIRMED</h1>
+            <a href="/authorization">-> AUTHORIZATION</a>
+        </div>
+    </div>
+    <script src="{{ url_for('registration.static', filename = 'js/registration.js') }}" defer></script>
+{% endblock %}

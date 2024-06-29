@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Сторінка корзини
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('home.static', filename = 'home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <header>
+        <div class="links">
+            <a class = "options" href = "/">HOME</a>
+            <a class = "options" href = "/shop">SHOP</a>
+            <a class = "active" href = "/basket">BASKET</a>
+            <a class = "options" href = "/contacts">CONTACTS</a>
+        </div>
+        {% if current_user.is_authenticated %}
+            <h1 class = "username">{{ current_user.name }}</h1>
+        {% endif %}
+    </header>
+
+    <main>
+        <h1>BASKET</h1>
+    </main>
+{% endblock %}

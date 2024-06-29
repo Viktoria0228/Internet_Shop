@@ -1,0 +1,87 @@
+header{
+    /* background-color: aquamarine; */
+    width: 1440px;
+    height: 80px;
+    padding: 17px 39px 17px 39px;
+    gap: 387px;
+    opacity: 0px;
+}
+
+.links{
+    /* background-color: rgb(13, 255, 174); */
+    padding: 4px, 122px, 4px, 122px;
+    font-weight: 400px;
+    display: flex;
+    width: 80%;
+    height: 47px;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+}
+
+.links :visited{
+    color: black;
+}
+
+.links a{
+    color: black;
+    font-size: 24px;
+    height: 44px;
+    text-align: center;
+}
+#reg, #auth{
+    color: black;
+    font-size: 24px;
+    height: 44px;
+    text-align: center; 
+    text-decoration: underline;
+    transition: opacity 0.15s;
+
+}
+#reg:hover, #auth:hover {
+    opacity: 0.7;
+}
+
+
+main{
+    width: 1440px;
+    top: 48px;
+    left: 1561px;
+    padding: 10px 10px 10px 39px;
+    gap: 10px;
+}
+
+main h1{
+    /* background-color: brown; */
+    margin: 0 auto;
+    font-size: 100px;
+    /* font-family: Inter; */
+    font-weight: 400;
+    width: 831px;
+    height: 165px;
+    text-align: center;
+    margin-top: 18%;
+}
+
+.options{
+    text-decoration: none;
+}
+.active{
+    font-weight: bold;
+}
+
+.username{
+    /* background-color: aqua; */
+    width: 247px;
+    height: 44px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    left: 80%;
+    top: 10px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: right;
+
+}
